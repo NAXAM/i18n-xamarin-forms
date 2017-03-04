@@ -3,13 +3,13 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:i18n="clr-namespace:Naxam.I18n.Forms;assembly=Naxam.I18n.Forms"
-	xmlns:i18nc="clr-namespace:Naxam.I18n.Forms.Converters;assembly=Naxam.I18n.Forms"
+	xmlns:converters="clr-namespace:Naxam.I18n.Forms.Converters;assembly=Naxam.I18n.Forms"
 	x:Class="Naxam.I18n.Demo.NewPage"
 	Title="Demo-2"
 	>
 	<ContentPage.Resources>
 		<ResourceDictionary>
-			<i18nc:TimeAgoConverter x:Key="TimeAgoConverter" />
+			<converters:TimeAgoConverter x:Key="TimeAgoConverter" />
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<StackLayout>
