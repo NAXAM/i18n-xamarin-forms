@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:i18n="clr-namespace:Naxam.I18n.Forms;assembly=Naxam.I18n.Forms"
+	xmlns:i18nc="clr-namespace:Naxam.I18n.Forms.Converters;assembly=Naxam.I18n.Forms"
+	x:Class="Naxam.I18n.Demo.NewPage"
+	Title="Demo-2"
+	>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<i18nc:TimeAgoConverter x:Key="TimeAgoConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<StackLayout>
+		<Label
+			Text="{i18n:Translate List.Title}"
+			HorizontalTextAlignment="Center"
+			Margin="8"
+			/>
+		<ListView
+			x:Name="lstDates"
+			>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding ., Converter={StaticResource TimeAgoConverter}}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

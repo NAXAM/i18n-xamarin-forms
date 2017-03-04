@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Naxam.I18n.Forms;
+using Naxam.I18n.iOS;
 using UIKit;
 
 namespace Naxam.I18n.Demo.iOS
@@ -14,9 +16,23 @@ namespace Naxam.I18n.Demo.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
+			Xamarin.Forms.DependencyService.Register<IDependencyGetter, DepenencyGetter>();
+
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
+		}
+	}
+
+	public class DepenencyGetter : IDependencyGetter
+	{
+		Dictionary<Type, object> cache = new Dictionary<Type, object> {
+			{typeof(ILocalizedResourceProvider), new LocalizedResourceProvider(new Localizer(), App.ResManager)}
+		};
+
+		public T Get<T>()
+		{
+			return (T)cache[typeof(T)];
 		}
 	}
 }

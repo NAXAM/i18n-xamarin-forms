@@ -7,12 +7,12 @@ namespace Naxam.I18n
 	public class LocalizedResourceProvider : ILocalizedResourceProvider
 	{
 		readonly ResourceManager resmgr;
-		readonly CultureInfo ci;
+		readonly ILocalizer localizer;
 
 		public LocalizedResourceProvider(ILocalizer localizer, ResourceManager resourceManager)
 		{
+			this.localizer = localizer;
 			resmgr = resourceManager;
-			ci = localizer.GetCurrentCultureInfo();
 		}
 
 		public string GetText(string resourceKey, params object[] objects)
@@ -22,6 +22,7 @@ namespace Naxam.I18n
 				return resourceKey;
 			}
 
+			var ci = localizer.GetCurrentCultureInfo();
 			var translation = resmgr.GetString(resourceKey, ci);
 
 			if (translation == null)
