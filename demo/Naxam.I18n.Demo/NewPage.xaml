@@ -14,7 +14,7 @@
 	</ContentPage.Resources>
 	<StackLayout>
 		<Label
-			Text="{i18n:Translate List.Title}"
+			Text="{i18n:Translate List_Title}"
 			HorizontalTextAlignment="Center"
 			Margin="8"
 			/>

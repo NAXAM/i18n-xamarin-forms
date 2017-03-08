@@ -33,41 +33,41 @@ namespace Naxam.I18n.Forms.Converters
 
 			if (!d.HasValue)
 			{
-				return res?.GetText("TimeAgo.NA") ?? "N/A";
+				return res?.GetText("TimeAgo_NA") ?? "N/A";
 			}
 
 			DateTimeOffset now = DateTime.Now;
 			var timespan = now.Subtract(d.Value);
 			if (timespan < TimeSpan.FromSeconds(60))
 			{
-				return res?.GetText("TimeAgo.LessThan1Minute") ?? "Just now";
+				return res?.GetText("TimeAgo_LessThan1Minute") ?? "Just now";
 			}
 			if (timespan < TimeSpan.FromMinutes(5))
 			{
-				return res?.GetText("TimeAgo.LessThan5Minutes") ?? "Few minutes ago";
+				return res?.GetText("TimeAgo_LessThan5Minutes") ?? "Few minutes ago";
 			}
 
 			if (timespan < TimeSpan.FromMinutes(60))
 			{
-				return res?.GetText("TimeAgo.LessThan1Hour", timespan.Minutes) ?? $"{timespan.Minutes} minutes ago";
+				return res?.GetText("TimeAgo_LessThan1Hour", timespan.Minutes) ?? $"{timespan.Minutes} minutes ago";
 			}
 
 			if (timespan < TimeSpan.FromHours(24))
 			{
-				return res?.GetText("TimeAgo.LessThan1Day", timespan.Hours) ?? $"{timespan.Hours} hours ago";
+				return res?.GetText("TimeAgo_LessThan1Day", timespan.Hours) ?? $"{timespan.Hours} hours ago";
 			}
 
 			if (timespan < TimeSpan.FromDays(2))
 			{
-				return res?.GetText("TimeAgo.Yesterday") ?? $"Yesterday";
+				return res?.GetText("TimeAgo_Yesterday") ?? $"Yesterday";
 			}
 
 			if (timespan < TimeSpan.FromDays(7))
 			{
-				return res?.GetText("TimeAgo.LessThan1Week", timespan.Days) ?? $"{timespan.Days} days ago";
+				return res?.GetText("TimeAgo_LessThan1Week", timespan.Days) ?? $"{timespan.Days} days ago";
 			}
 
-			return res?.GetText("TimeAgo.Past", d.Value) ?? d.Value.ToString("MMM dd, YYYY");
+			return res?.GetText("TimeAgo_Past", d.Value) ?? d.Value.ToString("MMM dd, YYYY");
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

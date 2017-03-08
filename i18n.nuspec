@@ -3,7 +3,7 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.I18n</id>
-       <version>1.0</version>
+       <version>1.0.1</version>
         <description>Xamarin Forms - Localization</description>
         <authors>Vu Duc Tuyen</authors>
         <owners>NAXAM CO.,LTD</owners>
@@ -42,5 +42,14 @@
         <file src="Naxam.I18n.Forms/bin/Release/Naxam.I18n.Forms.xml" target="lib/Xamarin.iOS10/Naxam.I18n.Forms.xml" />
         <file src="Naxam.I18n.Platform.iOS/bin/Release/Naxam.I18n.Platform.iOS.dll" target="lib/Xamarin.iOS10/Naxam.I18n.Platform.iOS.dll" />
         <file src="Naxam.I18n.Platform.iOS/bin/Release/Naxam.I18n.Platform.iOS.xml" target="lib/Xamarin.iOS10/Naxam.I18n.Platform.iOS.xml" />
+
+
+        <!--iOS-->
+        <file src="Naxam.I18n/bin/Release/Naxam.I18n.dll" target="lib/UAP10/Naxam.I18n.dll" />
+        <file src="Naxam.I18n/bin/Release/Naxam.I18n.xml" target="lib/UAP10/Naxam.I18n.xml" />
+        <file src="Naxam.I18n.Forms/bin/Release/Naxam.I18n.Forms.dll" target="lib/UAP10/Naxam.I18n.Forms.dll" />
+        <file src="Naxam.I18n.Forms/bin/Release/Naxam.I18n.Forms.xml" target="lib/UAP10/Naxam.I18n.Forms.xml" />
+        <file src="Naxam.I18n.Platform.Uwp/bin/Release/Naxam.I18n.Platform.Uwp.dll" target="lib/UAP10/Naxam.I18n.Platform.Uwp.dll" />
+        <file src="Naxam.I18n.Platform.Uwp/bin/Release/Naxam.I18n.Platform.Uwp.xml" target="lib/UAP10/Naxam.I18n.Platform.Uwp.xml" />
     </files>
 </package>

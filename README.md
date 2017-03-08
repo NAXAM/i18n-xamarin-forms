@@ -73,7 +73,7 @@ localizer.SetLocale(culture);
 
 *Get localized text*
 ```c#
-localizeResProvider.GetText("MainPage.Title");
+localizeResProvider.GetText("MainPage_Title");
 ```
 
 *Use extension and converter*
@@ -97,35 +97,35 @@ xmlns:converters="clr-namespace:Naxam.I18n.Forms.Converters;assembly=Naxam.I18n.
 # Provide localized texts for `TimeAgoConverter`
 To use `TimeAgoConverter`, you need to provide appropriate localized texts for keys as listed below.
 ```xml
-<data name="TimeAgo.NA" xml:space="preserve">
+<data name="TimeAgo_NA" xml:space="preserve">
     <value>N/A</value>
     <comment>N/A</comment>
 </data>
-<data name="TimeAgo.LessThan1Minute" xml:space="preserve">
+<data name="TimeAgo_LessThan1Minute" xml:space="preserve">
     <value>Just now</value>
     <comment>Less than 1 minute</comment>
 </data>
-<data name="TimeAgo.LessThan5Minutes" xml:space="preserve">
+<data name="TimeAgo_LessThan5Minutes" xml:space="preserve">
     <value>Few minutes</value>
     <comment>Less than 5 minutes</comment>
 </data>
-<data name="TimeAgo.LessThan1Hour" xml:space="preserve">
+<data name="TimeAgo_LessThan1Hour" xml:space="preserve">
     <value>{0} minutes</value>
     <comment>Less than 1 hour</comment>
 </data>
-<data name="TimeAgo.LessThan1Day" xml:space="preserve">
+<data name="TimeAgo_LessThan1Day" xml:space="preserve">
     <value>{0} hrs</value>
     <comment>Less than 1 day</comment>
 </data>
-<data name="TimeAgo.Yesterday" xml:space="preserve">
+<data name="TimeAgo_Yesterday" xml:space="preserve">
     <value>Yesterday</value>
     <comment>Yesterday</comment>
 </data>
-<data name="TimeAgo.LessThan1Week" xml:space="preserve">
+<data name="TimeAgo_LessThan1Week" xml:space="preserve">
     <value>{0} days</value>
     <comment>Less than 1 week</comment>
 </data>
-<data name="TimeAgo.Past" xml:space="preserve">
+<data name="TimeAgo_Past" xml:space="preserve">
     <value>{0:dd/MM/yyyy}</value>
     <comment>Past</comment>
 </data>

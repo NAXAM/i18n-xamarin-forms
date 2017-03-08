@@ -26,11 +26,23 @@ namespace Naxam.I18n.Demo.iOS
 
 	public class DepenencyGetter : IDependencyGetter
 	{
-		Dictionary<Type, object> cache = new Dictionary<Type, object> {
-			{typeof(ILocalizedResourceProvider), new LocalizedResourceProvider(new Localizer(), App.ResManager)}
-		};
+        readonly Dictionary<Type, object> cache;
+        public DepenencyGetter()
+        {
+            ILocalizer localizer = new Localizer();
+            cache = new Dictionary<Type, object> {
+                {
+                    typeof(ILocalizer),
+                    localizer
+                },
+                {
+                    typeof(ILocalizedResourceProvider),
+                    new LocalizedResourceProvider(localizer, App.ResManager)
+                }
+            };
+        }
 
-		public T Get<T>()
+        public T Get<T>()
 		{
 			return (T)cache[typeof(T)];
 		}
