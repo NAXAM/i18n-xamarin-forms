@@ -3,5 +3,4 @@
 obj/
 bin/
 packages/
-*.nupkg
 .vs/
