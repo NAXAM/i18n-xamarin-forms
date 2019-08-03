@@ -1,10 +1,9 @@
 using System;
-using System.Globalization;
 using System.Resources;
 
 namespace Naxam.I18n
 {
-	public class LocalizedResourceProvider : ILocalizedResourceProvider
+    public class LocalizedResourceProvider : ILocalizedResourceProvider
 	{
 		readonly ResourceManager resmgr;
 		readonly ILocalizer localizer;
@@ -36,7 +35,9 @@ nameof(resourceKey));
 #endif
 			}
 
-			return string.Format(translation, objects);
+			return objects.Length > 0 
+                ? string.Format(translation, objects)
+                : translation;
 		}
 	}
 }

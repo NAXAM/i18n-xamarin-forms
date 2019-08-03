@@ -16,7 +16,7 @@
         <copyright>(c) 2017 NAXAM</copyright>
         <tags>Xamarin.Forms, Xamarin.Android, Xamarin.iOS, Localization</tags>
         <dependencies>
-            <dependency id="Xamarin.Forms" version="2.3.3.180" />
+            <dependency id="Xamarin.Forms" version="2.5.1.527436" />
         </dependencies>
     </metadata>
     <!-- Optional 'files' node -->
@@ -44,12 +44,12 @@
         <file src="Naxam.I18n.Platform.iOS/bin/Release/Naxam.I18n.Platform.iOS.xml" target="lib/Xamarin.iOS10/Naxam.I18n.Platform.iOS.xml" />
 
 
-        <!--iOS-->
-        <file src="Naxam.I18n/bin/Release/Naxam.I18n.dll" target="lib/UAP10/Naxam.I18n.dll" />
+        <!--UWP-->
+        <!-- <file src="Naxam.I18n/bin/Release/Naxam.I18n.dll" target="lib/UAP10/Naxam.I18n.dll" />
         <file src="Naxam.I18n/bin/Release/Naxam.I18n.xml" target="lib/UAP10/Naxam.I18n.xml" />
         <file src="Naxam.I18n.Forms/bin/Release/Naxam.I18n.Forms.dll" target="lib/UAP10/Naxam.I18n.Forms.dll" />
         <file src="Naxam.I18n.Forms/bin/Release/Naxam.I18n.Forms.xml" target="lib/UAP10/Naxam.I18n.Forms.xml" />
         <file src="Naxam.I18n.Platform.Uwp/bin/Release/Naxam.I18n.Platform.Uwp.dll" target="lib/UAP10/Naxam.I18n.Platform.Uwp.dll" />
-        <file src="Naxam.I18n.Platform.Uwp/bin/Release/Naxam.I18n.Platform.Uwp.xml" target="lib/UAP10/Naxam.I18n.Platform.Uwp.xml" />
+        <file src="Naxam.I18n.Platform.Uwp/bin/Release/Naxam.I18n.Platform.Uwp.xml" target="lib/UAP10/Naxam.I18n.Platform.Uwp.xml" /> -->
     </files>
 </package>
