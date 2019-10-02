@@ -6,6 +6,7 @@ namespace Naxam.I18n.Droid
 	public class Localizer : ILocalizer
 	{
 		public const string DefaultLocale = "en";
+		private CultureInfo currentCultureInfo;
 
 		public Localizer()
 		{
@@ -14,13 +15,13 @@ namespace Naxam.I18n.Droid
 
 		public void SetLocale(CultureInfo ci)
 		{
+			currentCultureInfo = ci;
 			Thread.CurrentThread.CurrentCulture = ci;
 			Thread.CurrentThread.CurrentUICulture = ci;
 		}
 
-		public CultureInfo GetCurrentCultureInfo() {
-			return Thread.CurrentThread.CurrentCulture;
-		}
+		public CultureInfo GetCurrentCultureInfo()  => currentCultureInfo 
+		                                               ?? (currentCultureInfo = Thread.CurrentThread.CurrentCulture);
 
 		void Initialize()
 		{
