@@ -67,7 +67,7 @@ namespace Naxam.I18n.Forms.Converters
 				return res?.GetText("TimeAgo_LessThan1Week", timespan.Days) ?? $"{timespan.Days} days ago";
 			}
 
-			return res?.GetText("TimeAgo_Past", d.Value) ?? d.Value.ToString("MMM dd, YYYY");
+			return res?.GetText("TimeAgo_Past", d.Value) ?? d.Value.ToString("MMM dd, yyy");
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
